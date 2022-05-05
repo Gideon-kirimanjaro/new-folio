@@ -6,6 +6,7 @@
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <Navbar />
+    <h3>{{ testName }}</h3>
     <vue-whatsapp-widget
       phone-number="+254707000574"
       text-reply="Available"
@@ -18,11 +19,13 @@
 <script>
 import VueWhatsappWidget from 'vue-whatsapp-widget'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { mapState } from 'vuex'
 // import Companies from '../components/Portfolio/Companies'
 export default {
   components: {
     VueWhatsappWidget,
   },
+  computed: mapState(['testName']),
   methods: {
     moveUp() {
       window.scrollTo(0, 0)
@@ -35,6 +38,7 @@ export default {
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
+  border: 0;
 }
 button {
   background-color: blueviolet;

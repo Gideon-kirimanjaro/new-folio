@@ -56,16 +56,18 @@ export default {
   },
   computed: {
     images() {
-      const liftedData = this.$store.modules.imageModule.state.images
+      const liftedData = this.$store.state.web.images
       const filteredData = liftedData.filter((val) => {
         const siteName = val.name.replace(/\D/g, '')
         return siteName === '0' || siteName === '1' || siteName === '2'
           ? val
           : null
       })
+
       return filteredData
     },
   },
+  mounted() {},
 
   methods: {},
 }

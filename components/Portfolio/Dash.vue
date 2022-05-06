@@ -53,7 +53,7 @@ export default {
   },
   computed: {
     dashBoards() {
-      const dashBoardData = this.$store.state.dashBoards
+      const dashBoardData = this.$store.state.dashboard.dashBoards
       const sortedDash = dashBoardData.slice(0, 3)
       return sortedDash
     },

@@ -62,7 +62,7 @@ export default {
   },
   computed: {
     netData() {
-      const data = this.$store.state.netData
+      const data = this.$store.state.networking.netData
       const sortedData = data.slice(0, 3)
       return sortedData
     },
